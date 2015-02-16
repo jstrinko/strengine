@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="http://fonts.googleapis.com/css?family=Josefin+Sans|Open_Sans_Condensed:300" rel="stylesheet" type="text/css" />
+		<link href="/style/site.css" rel="stylesheet" type="text/css" />
+		<script src="/bower/jquery/dist/jquery.min.js"></script>
+		<script src="/bower/jquery-cookie/jquery.cookie.js"></script>
+		<script src="/bower/underscore/underscore-min.js"></script>
+		<script src="/script/strengine.js"></script>
+		<script src="/script/blockgame.js"></script>
+	</head>
+	<body>
+		<script>
+			(function() {
+				var engine = new Strengine();
+				engine.load(new Block_Game());
+				engine.start();
+			})();
+		</script>
+	</body>
+</html>

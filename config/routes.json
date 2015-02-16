@@ -1,0 +1,49 @@
+{
+	"/": {
+		"type": "file",
+		"source": "/web/html/index.html",
+		"content-type": "text/html"
+	},
+	"/style/site.css": {
+		"type": "file",
+		"source": "/build/style/site.css",
+		"content-type": "text/css",
+		"grunt_info": {
+			"less": {
+				"options": {
+					"sourceMap": true
+				},
+				"files": {
+					"__SRCTOP__/strengine/build/style/site.css": "__SRCTOP__/strengine/web/less/site.less"
+				}
+			},
+			"watch": {
+				"files": [
+					"__SRCTOP__/strengine/web/less/**"
+				],
+				"tasks": ["build"]
+			}
+		}
+	},
+	"/script/strengine.js": {
+		"type": "file",
+		"source": "/build/script/strengine.js",
+		"content-type": "text/javascript",
+		"grunt_info": {
+			"concat": {
+				"src": [
+					"__SRCTOP__/fast-bindall/lib/fast-bindall.js",
+					"__SRCTOP__/strengine/web/script/*.js"
+				],
+				"dest": "__SRCTOP__/strengine/build/script/strengine.js"
+			},
+			"watch": {
+				"files": [
+					"__SRCTOP__/strengine/web/script/strengine.js",
+					"__SRCTOP__/strengine/web/script/base_game.js"
+				],
+				"tasks": ["build"]
+			}
+		}
+	}
+}
